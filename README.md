@@ -1,6 +1,6 @@
 # ConformalAMR
 
-This repository contains the code used to conduct experiments presented in the paper _Antimicrobial drug recommendation from MALDI-TOF mass spectrometry with statistical guarantees using conformal prediction_ by Nina Corvelo Benz, Lucas Miranda, Dexiong Chen, Janko Sattler, and Karsten Borgwardt.
+This repository contains the code used to conduct experiments presented in the paper _Antimicrobial drug recommendation from MALDI-TOF mass spectrometry with statistical guarantees using conformal prediction_, by Nina Corvelo Benz, Lucas Miranda, Dexiong Chen, Janko Sattler, and Karsten Borgwardt.
 
 ### Abstract
 
