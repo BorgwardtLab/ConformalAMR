@@ -24,7 +24,7 @@ multi-drug antibiotics that are highly relevant in clinical practice. We success
 
 ### Installation
 
-We provide `` for reproducible installation of the environment used in our experiments using [poetry](). We recommend to do this within a conda/mamba isolated environment, containing Python^=3.11. To install the environment, run the following command (assuming you have poetry installed):
+We provide `pyproject.toml` and `poetry.lock` files for reproducible installation of the environment used in our experiments using [poetry](). We recommend to do this within a conda/mamba isolated environment, containing Python^=3.11. To install the environment, run the following command (assuming you have poetry installed):
 
 ```bash
 
