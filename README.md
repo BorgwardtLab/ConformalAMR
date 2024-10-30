@@ -10,7 +10,7 @@ in most clinics for fast species identification, offer promise but face limitati
 coverage guarantees, ensuring that bacterial resistance to a certain antibiotic is flagged with a specified
 error rate. 
 
-![Conformal framework](images/pipeline.pdf "Conformal prediction pipeline.")
+![Conformal framework](images/pipeline.png "Conformal prediction pipeline.")
 
 Our proposed conformal predictor constructs improved prediction sets over standard CP approaches by using a knowledge graph capturing the interdependencies in antibiotic resistance patterns.
 
@@ -20,7 +20,7 @@ In addition, we introduce a novel classifier framework that improves upon previo
 methods. Besides increasing resistance detection for most tested species-drug combinations, the presented architecture, termed ResMLP-GNN, overcomes the limitations of previous efforts and supports
 multi-drug antibiotics that are highly relevant in clinical practice. We successfully evaluated our approach on a set of highly-relevant antibiotics, commonly used in clinics to treat infections with Klebsiella pneumoniae and Escherichia coli
 
-![ROC and PR curves](images/curves.pdf "ResMLP-GNN reaches SOTA performance when predicting antimicrobial resistance from MALDI-TOF and drug structure.")
+![ROC and PR curves](images/curves.png "ResMLP-GNN reaches SOTA performance when predicting antimicrobial resistance from MALDI-TOF and drug structure.")
 
 ### Installation
 
