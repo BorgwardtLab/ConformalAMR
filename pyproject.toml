@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "conformal_amr"
+version = "0.1.0"
+description = "AMR prediction using conformal inference"
+authors = ["Nina Corvelo Benz, Lucas Miranda"]
+license = "BSD3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.2"
+seaborn = "^0.13.2"
+numba = "0.59.0"
+shap = "^0.46.0"
+snakemake = "<8.0.0"
+snakefmt = "^0.10.2"
+pulp = "2.7.0"
+rdkit = "^2024.3.5"
+umap-learn = "^0.5.6"
+wandb = "^0.18.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+isort = "^5.13.2"
+jupyter = "^1.1.1"
+notebook = "^7.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -32,3 +32,39 @@ mamba create -n ConformalAMR python=3.11
 poetry install
 
 ```
+
+This should install both the required dependencies, and the conformal_amr package as such.
+
+### Training base ResAMR-GNN models
+
+To train the base ResAMR-GNN models, you can run the following command:
+
+```bash
+
+poetry run python scripts/train_ResAMR_classifier.py --driams_dataset A --driams_long_table data/DRIAMS_combined_long_table_multidrug.csv --drugs_df data/DRIAMS_Mole-BERT_drug_embeddings.csv --spectra_matrix path/to/spectra/DRIAMS-A/spectra_binned_6000_all_multidrug.npy --output_folder results
+
+```
+
+Where `A` can be replaced by `B` or `C` or `D` to train on the respective DRIAMS datasets, and the spectra matrix is generated using the `notebooks/Process_DRIAMS_data.ipynb.py` notebook, upon downloading the DRIAMS dataset.
+
+### Finetuning ResMLP-GNN models
+
+To finetune a base ResMLP-GNN model on a fixed species-drug combination, you can run the following command:
+
+```bash
+
+poetry run python scripts/finetune_ResAMR_classifier.py --pretrained_checkpoints_folder /path/to/pretrained/base/models --driams_dataset A --driams_long_table data/DRIAMS_combined_long_table_multidrug.csv --drugs_df data/DRIAMS_Mole-BERT_drug_embeddings.csv --spectra_matrix path/to/spectra/DRIAMS-A/spectra_binned_6000_all_multidrug.npy --splits_file path/to/splits/file --n_epochs 150 --output_folder results --species_drug_combination 'Escherichia coli_Ceftriaxone' --freeze_drug_emb
+    
+```
+
+Where `A` can be replaced by `B` or `C` or `D` to train on the respective DRIAMS datasets, the pretrained checkpoints and the splits files are generated after training the base models, and 'Escherichia coli_Ceftriaxone' can be replaced by any other species-drug combination of interest.
+
+### Evaluating the conformal predictor described in the paper
+
+To evaluate knowledge-graph enhanced conformal predictor with the hyperparameters described in the paper, you can simply run:
+
+```bash
+
+poetry run python scripts/evaluate_conformal.py
+
+```
